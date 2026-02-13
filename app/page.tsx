@@ -34,7 +34,7 @@ export default function Home() {
 
         {/* CONTACTO */}
         <div style={styles.contact}>
-          <ContactRow icon={<FaMapMarkerAlt />} text="Popayán, Colombia" />
+          <ContactRow icon={<FaMapMarkerAlt />} text="cali, Colombia" />
           <ContactRow
             icon={<FaEnvelope />}
             text="nineyohanajimenez@gmail.com"
