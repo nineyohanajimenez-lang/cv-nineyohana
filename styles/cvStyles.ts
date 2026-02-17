@@ -1,113 +1,110 @@
 export const styles = {
   main: {
+    backgroundColor: "#f4f6f9",
     minHeight: "100vh",
-    backgroundColor: "#faf7f8",
+    padding: "40px 20px",
     display: "flex",
     justifyContent: "center",
-    padding: "40px 20px",
-    fontFamily: "'Segoe UI', sans-serif",
   },
 
   card: {
     backgroundColor: "#ffffff",
-    padding: "40px 50px",
-    borderRadius: "24px",
-    boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
-    maxWidth: "820px",
-    width: "100%",
+    width: "900px",
+    padding: "50px",
+    borderRadius: "20px",
+    boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+  },
+
+  /* HEADER */
+  headerContainer: {
+    display: "flex",
+    gap: "40px",
+    alignItems: "center",
+    marginBottom: "40px",
   },
 
   photoWrapper: {
-    width: "200px",
-    height: "200px",
+    width: "180px",
+    height: "180px",
     borderRadius: "50%",
     overflow: "hidden",
-    border: "4px solid #f1b6c1",
-    margin: "0 auto 20px auto",
+    border: "4px solid #f3c1cf",
+    flexShrink: 0,
   },
 
   photo: {
     width: "100%",
     height: "100%",
     objectFit: "cover" as const,
-    objectPosition: "50% 25%",
+  },
+
+  headerInfo: {
+    flex: 1,
   },
 
   name: {
-    textAlign: "center" as const,
-    fontSize: "28px",
+    fontSize: "32px",
+    fontWeight: 600,
     color: "#c86b86",
-    fontWeight: 500,
-    marginBottom: "20px",
+    marginBottom: "10px",
+  },
+
+  subtitle: {
+    fontSize: "16px",
+    color: "#777",
+    marginBottom: "15px",
   },
 
   contact: {
     display: "flex",
     flexDirection: "column" as const,
-    gap: "10px",
-    alignItems: "center",
-    marginBottom: "35px",
+    gap: "6px",
+    color: "#555",
+    fontSize: "14px",
   },
 
-  contactRow: {
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-  },
-
-  contactText: {
-    color: "#3f3f3f",
-    fontSize: "15px",
-  },
-
-  iconBox: {
-    width: "22px",
-    display: "flex",
-    justifyContent: "center",
-    color: "#e7a1b0",
-  },
-
+  /* SECCIONES */
   section: {
-    marginBottom: "30px",
+    marginTop: "35px",
   },
 
   sectionTitle: {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-    fontSize: "21px",
-    color: "#c86b86",
-    marginBottom: "12px",
-  },
-
-  sectionIcon: {
-    color: "#e7a1b0",
+    background: "linear-gradient(90deg, #fde4ec, #f9d7e1)",
+    padding: "12px 18px",
+    borderRadius: "12px",
+    fontWeight: 600,
+    color: "#b85c76",
+    marginBottom: "15px",
   },
 
   text: {
-    color: "#3f3f3f",
-    lineHeight: "1.6",
-    fontSize: "15px",
-  },
-
-  experience: {
-    marginBottom: "18px",
-  },
-
-  company: {
-    color: "#3f3f3f",
-    fontWeight: 600,
-  },
-
-  role: {
-    fontSize: "14px",
-    color: "#5f5f5f",
-    marginBottom: "6px",
+    textAlign: "justify" as const,
+    lineHeight: "1.7",
+    color: "#444",
   },
 
   list: {
     paddingLeft: "20px",
-    color: "#3f3f3f",
-    lineHeight: "1.6",
+    lineHeight: "1.8",
+    color: "#444",
+  },
+
+  experienceItem: {
+    marginBottom: "20px",
+  },
+
+  company: {
+    fontWeight: 600,
+    color: "#333",
+  },
+
+  role: {
+    color: "#777",
+    fontSize: "14px",
+    marginBottom: "8px",
   },
 };
+
