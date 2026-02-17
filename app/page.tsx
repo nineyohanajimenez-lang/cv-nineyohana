@@ -39,7 +39,7 @@ export default function Home() {
 
             <div style={styles.contact}>
               <div>
-                <FaMapMarkerAlt /> Popayan, Colombia
+                <FaMapMarkerAlt /> Cali, Colombia
               </div>
 
               {/* CORREO CLICKEABLE */}
