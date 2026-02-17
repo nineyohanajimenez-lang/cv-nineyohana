@@ -1,4 +1,6 @@
-export const styles = {
+import { CSSProperties } from "react";
+
+export const styles: { [key: string]: CSSProperties } = {
   main: {
     backgroundColor: "#f4f6f9",
     minHeight: "100vh",
@@ -15,7 +17,6 @@ export const styles = {
     boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
   },
 
-  /* HEADER */
   headerContainer: {
     display: "flex",
     gap: "40px",
@@ -35,7 +36,7 @@ export const styles = {
   photo: {
     width: "100%",
     height: "100%",
-    objectFit: "cover" as const,
+    objectFit: "cover",
   },
 
   headerInfo: {
@@ -57,13 +58,12 @@ export const styles = {
 
   contact: {
     display: "flex",
-    flexDirection: "column" as const,
+    flexDirection: "column",
     gap: "6px",
     color: "#555",
     fontSize: "14px",
   },
 
-  /* SECCIONES */
   section: {
     marginTop: "35px",
   },
@@ -81,7 +81,7 @@ export const styles = {
   },
 
   text: {
-    textAlign: "justify" as const,
+    textAlign: "justify",
     lineHeight: "1.7",
     color: "#444",
   },
@@ -106,7 +106,8 @@ export const styles = {
     fontSize: "14px",
     marginBottom: "8px",
   },
-ontactRow: {
+
+  contactRow: {
     display: "flex",
     alignItems: "center",
     gap: "8px",
@@ -120,5 +121,4 @@ ontactRow: {
   contactText: {
     color: "#444",
   },
-
 };
