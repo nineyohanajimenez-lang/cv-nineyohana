@@ -106,4 +106,19 @@ export const styles = {
     fontSize: "14px",
     marginBottom: "8px",
   },
+ontactRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    marginBottom: "6px",
+  },
+
+  iconBox: {
+    color: "#c86b86",
+  },
+
+  contactText: {
+    color: "#444",
+  },
+
 };
