@@ -1,89 +1,91 @@
 export const styles = {
   main: {
-    backgroundColor: "#f4f6f9",
+    backgroundColor: "#f4f4f4",
     minHeight: "100vh",
-    padding: "40px 20px",
+    padding: "60px 20px",
     display: "flex",
     justifyContent: "center",
   },
 
   card: {
     backgroundColor: "#ffffff",
-    width: "900px",
+    width: "850px",
     padding: "50px",
-    borderRadius: "20px",
-    boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+    borderRadius: "18px",
+    boxShadow: "0 15px 40px rgba(0,0,0,0.08)",
   },
 
-  /* HEADER */
-  headerContainer: {
-    display: "flex",
-    gap: "40px",
-    alignItems: "center",
-    marginBottom: "40px",
-  },
+  /* FOTO */
 
   photoWrapper: {
-    width: "180px",
-    height: "180px",
-    borderRadius: "50%",
-    overflow: "hidden",
-    border: "4px solid #f3c1cf",
-    flexShrink: 0,
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "25px",
   },
 
   photo: {
-    width: "100%",
-    height: "100%",
+    borderRadius: "50%",
     objectFit: "cover" as const,
+    border: "4px solid #e6e6e6",
   },
 
-  headerInfo: {
-    flex: 1,
-  },
+  /* NOMBRE */
 
   name: {
-    fontSize: "32px",
-    fontWeight: 600,
-    color: "#c86b86",
-    marginBottom: "10px",
+    textAlign: "center" as const,
+    color: "#c86b85",
+    fontSize: "34px",
+    fontWeight: "600",
+    marginBottom: "8px",
   },
 
-  subtitle: {
-    fontSize: "16px",
-    color: "#777",
-    marginBottom: "15px",
-  },
+  /* CONTACTO */
 
   contact: {
     display: "flex",
     flexDirection: "column" as const,
-    gap: "6px",
-    color: "#555",
-    fontSize: "14px",
+    alignItems: "center",
+    marginBottom: "40px",
   },
 
-  /* SECCIONES */
-  section: {
-    marginTop: "35px",
-  },
-
-  sectionTitle: {
+  contactRow: {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-    background: "linear-gradient(90deg, #fde4ec, #f9d7e1)",
-    padding: "12px 18px",
-    borderRadius: "12px",
-    fontWeight: 600,
-    color: "#b85c76",
+    marginBottom: "8px",
+  },
+
+  iconBox: {
+    color: "#c86b85",
+    fontSize: "16px",
+  },
+
+  contactText: {
+    fontSize: "14px",
+    color: "#555",
+  },
+
+  /* SECCIONES */
+
+  section: {
+    marginBottom: "35px",
+  },
+
+  sectionHeader: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
     marginBottom: "15px",
+    color: "#c86b85",
+    fontSize: "18px",
+    fontWeight: "600",
   },
 
   text: {
-    textAlign: "justify" as const,
+    fontSize: "15px",
     lineHeight: "1.7",
     color: "#444",
+    textAlign: "justify" as const,
   },
 
   list: {
@@ -92,19 +94,36 @@ export const styles = {
     color: "#444",
   },
 
+  /* EXPERIENCIA */
+
   experienceItem: {
     marginBottom: "20px",
   },
 
-  company: {
-    fontWeight: 600,
-    color: "#333",
+  experienceHeader: {
+    fontWeight: "600",
+    fontSize: "16px",
+    marginBottom: "5px",
   },
 
-  role: {
-    color: "#777",
-    fontSize: "14px",
+  experienceTime: {
+    fontSize: "13px",
+    color: "#888",
     marginBottom: "8px",
+  },
+
+  /* BOTÓN WHATSAPP */
+
+  whatsappButton: {
+    display: "inline-block",
+    marginTop: "15px",
+    padding: "10px 18px",
+    backgroundColor: "#25D366",
+    color: "#ffffff",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "500",
+    fontSize: "14px",
   },
 };
 
