@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -12,18 +15,42 @@ import {
 import { styles } from "@/styles/cvStyles";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main style={styles.main}>
-      <div style={styles.card}>
-
+      <div
+        style={{
+          ...styles.card,
+          width: isMobile ? "100%" : "900px",
+          padding: isMobile ? "25px" : "50px",
+        }}
+      >
         {/* HEADER */}
-        <div style={styles.headerContainer}>
+        <div
+          style={{
+            ...styles.headerContainer,
+            flexDirection: isMobile ? "column" : "row",
+            textAlign: isMobile ? "center" : "left",
+          }}
+        >
           <div style={styles.photoWrapper}>
             <Image
               src="/foto.png"
               alt="Nine Yohana Jiménez Montenegro"
-              width={300}
-              height={300}
+              width={isMobile ? 150 : 300}
+              height={isMobile ? 150 : 300}
               style={styles.photo}
             />
           </div>
@@ -39,10 +66,10 @@ export default function Home() {
 
             <div style={styles.contact}>
               <div>
-                <FaMapMarkerAlt /> Cali, Colombia
+                <FaMapMarkerAlt /> Popayán, Colombia
               </div>
 
-              {/* CORREO CLICKEABLE */}
+              {/* CORREO */}
               <div>
                 <FaEnvelope />{" "}
                 <a
@@ -57,7 +84,7 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* WHATSAPP ELEGANTE */}
+              {/* WHATSAPP */}
               <div>
                 <FaPhoneAlt />{" "}
                 <a
@@ -145,7 +172,6 @@ export default function Home() {
             <li>Programación web básica</li>
           </ul>
         </div>
-
       </div>
     </main>
   );
