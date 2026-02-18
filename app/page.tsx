@@ -10,6 +10,7 @@ import {
   FaGraduationCap,
   FaUser,
   FaLaptopCode,
+  FaPrint,
 } from "react-icons/fa";
 
 import { styles } from "@/styles/cvStyles";
@@ -35,8 +36,27 @@ export default function Home() {
           ...styles.card,
           width: isMobile ? "100%" : "900px",
           padding: isMobile ? "25px" : "50px",
+          position: "relative", // 👈 necesario para posicionar el icono
         }}
       >
+        {/* ICONO IMPRIMIR MINIMALISTA */}
+        <FaPrint
+          onClick={() => window.print()}
+          size={18}
+          style={{
+            position: "absolute",
+            top: "25px",
+            right: "25px",
+            color: "#c86b86",
+            cursor: "pointer",
+            opacity: 0.8,
+            transition: "0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+          onMouseOut={(e) => (e.currentTarget.style.opacity = "0.8")}
+          title="Imprimir hoja de vida"
+        />
+
         {/* HEADER */}
         <div
           style={{
@@ -69,7 +89,6 @@ export default function Home() {
                 <FaMapMarkerAlt /> Popayán, Colombia
               </div>
 
-              {/* CORREO */}
               <div>
                 <FaEnvelope />{" "}
                 <a
@@ -84,7 +103,6 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* WHATSAPP */}
               <div>
                 <FaPhoneAlt />{" "}
                 <a

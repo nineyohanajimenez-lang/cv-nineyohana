@@ -15,6 +15,7 @@ export const styles: { [key: string]: CSSProperties } = {
     padding: "50px",
     borderRadius: "20px",
     boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+     position: "relative", 
   },
 
   headerContainer: {
