@@ -35,11 +35,13 @@ export default function Home() {
         style={{
           ...styles.card,
           width: isMobile ? "100%" : "900px",
-          padding: isMobile ? "25px" : "50px",
-          position: "relative", // 👈 necesario para posicionar el icono
+          padding: isMobile
+            ? "25px"
+            : "50px 50px 15px 50px",
+          position: "relative",
         }}
       >
-        {/* ICONO IMPRIMIR MINIMALISTA */}
+        {/* ICONO IMPRIMIR */}
         <FaPrint
           onClick={() => window.print()}
           size={18}
@@ -190,6 +192,27 @@ export default function Home() {
             <li>Programación web básica</li>
           </ul>
         </div>
+
+        {/* FIRMA CENTRADA */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "10px",
+          }}
+        >
+          <Image
+            src="/firma2.png"
+            alt="Firma Nine Montenegro"
+            width={150}
+            height={55}
+            style={{
+              objectFit: "contain",
+              opacity: 0.6,
+            }}
+          />
+        </div>
+
       </div>
     </main>
   );
